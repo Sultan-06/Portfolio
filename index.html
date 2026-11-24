@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sultansab T Naikwadi — Web Developer, CS Student & Programmer from Belagavi, Karnataka." />
+  <meta name="theme-color" content="#7c3aed" />
+  <title>Sultansab T Naikwadi | Portfolio</title>
+
+  <!-- Favicon (emoji fallback) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/skills.css" />
+  <link rel="stylesheet" href="css/education.css" />
+  <link rel="stylesheet" href="css/projects.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════
+     PAGE LOADER
+═══════════════════════════════════════════════ -->
+<div id="page-loader" aria-hidden="true">
+  <div class="loader__logo">&lt;Sultan/&gt;</div>
+  <div class="loader__bar"><div class="loader__fill"></div></div>
+  <div class="loader__text">Loading Portfolio…</div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SCROLL PROGRESS BAR
+═══════════════════════════════════════════════ -->
+<div id="scroll-progress" style="
+  position:fixed;top:0;left:0;height:3px;width:0;
+  background:linear-gradient(90deg,#7c3aed,#06b6d4);
+  z-index:1001;border-radius:0 3px 3px 0;
+  transition:width 0.1s linear;pointer-events:none;
+" aria-hidden="true"></div>
+
+<!-- ═══════════════════════════════════════════════
+     CUSTOM CURSOR
+═══════════════════════════════════════════════ -->
+<div class="cursor-dot"  aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<!-- ═══════════════════════════════════════════════
+     NAVBAR
+═══════════════════════════════════════════════ -->
+<header>
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+
+      <a href="#hero" class="nav__logo">
+        <span class="bracket">&lt;</span>Sultan<span class="slash">/</span><span class="bracket">&gt;</span>
+      </a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <a href="#contact" class="nav__cta" aria-label="Hire Sultan">Hire Me ✨</a>
+
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <nav class="nav__drawer" id="nav-drawer" aria-label="Mobile navigation">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <a href="#contact" class="drawer-cta">✨ Hire Me</a>
+  </nav>
+</header>
+
+<!-- ═══════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════ -->
+<section class="hero" id="hero" aria-label="Introduction">
+
+  <!-- Background layer -->
+  <div class="hero__bg" aria-hidden="true">
+    <div class="hero__grid"></div>
+    <div class="hero__noise"></div>
+    <div class="hero__orb hero__orb--1"></div>
+    <div class="hero__orb hero__orb--2"></div>
+    <div class="hero__orb hero__orb--3"></div>
+  </div>
+
+  <div class="hero__inner">
+
+    <!-- Left: Text -->
+    <div class="hero__content" data-reveal="up">
+
+      <div class="hero__badge">
+        <span class="hero__badge-pulse" aria-hidden="true"></span>
+        Available for Opportunities
+      </div>
+
+      <p class="hero__greeting">Hello World! I'm</p>
+
+      <h1 class="hero__name">
+        <span class="g-text">Sultansab</span><br>
+        T Naikwadi
+      </h1>
+
+      <div class="hero__role" aria-live="polite">
+        <span id="hero-typewriter"></span><span class="hero__cursor" aria-hidden="true"></span>
+      </div>
+
+      <p class="hero__desc">
+        A passionate <strong>Computer Science student</strong> from Belagavi, Karnataka —
+        building the future one line of code at a time. Skilled in
+        <strong>Web Development</strong>, <strong>Python</strong>, <strong>C/C++</strong>
+        and <strong>Databases</strong>.
+      </p>
+
+      <div class="hero__actions">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fas fa-rocket" aria-hidden="true"></i> View My Work
+        </a>
+        <a href="#contact" class="btn btn-ghost">
+          <i class="fas fa-paper-plane" aria-hidden="true"></i> Get In Touch
+        </a>
+      </div>
+
+      <div class="hero__socials" aria-label="Social links">
+        <span class="hero__social-label">Find me on</span>
+        <a href="mailto:zakinaik000@gmail.com" class="hero__social-link" data-tip="Email" aria-label="Email">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+        </a>
+        <a href="tel:+918088067172" class="hero__social-link" data-tip="Phone" aria-label="Phone">
+          <i class="fas fa-phone" aria-hidden="true"></i>
+        </a>
+        <a href="#" class="hero__social-link" data-tip="GitHub" aria-label="GitHub">
+          <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+        <a href="#" class="hero__social-link" data-tip="LinkedIn" aria-label="LinkedIn">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Right: Code Window + Mini Cards -->
+    <div class="hero__visual" data-reveal="up" data-delay="150">
+
+      <!-- Code window -->
+      <div class="code-window" role="img" aria-label="Code snippet about Sultansab">
+        <div class="code-window__titlebar">
+          <span class="code-window__dot code-window__dot--red"   title="Close"></span>
+          <span class="code-window__dot code-window__dot--yellow" title="Minimize"></span>
+          <span class="code-window__dot code-window__dot--green"  title="Fullscreen"></span>
+          <span class="code-window__filename">about_sultan.py</span>
+          <div class="code-window__tabs">
+            <span class="code-window__tab active">Python</span>
+            <span class="code-window__tab">README</span>
+          </div>
+        </div>
+        <div class="code-window__body">
+<pre><code><span class="c-cmt"># ✨ Sultansab T Naikwadi</span>
+
+<span class="c-kw">class</span> <span class="c-cls">Developer</span><span class="c-punc">:</span>
+
+  <span class="c-prop">name</span>     <span class="c-punc">=</span> <span class="c-str">"Sultansab T Naikwadi"</span>
+  <span class="c-prop">location</span> <span class="c-punc">=</span> <span class="c-str">"Belagavi, Karnataka 🇮🇳"</span>
+  <span class="c-prop">dob</span>      <span class="c-punc">=</span> <span class="c-str">"Nov 23, 2006"</span>
+  <span class="c-prop">degree</span>   <span class="c-punc">=</span> <span class="c-str">"BE @ VTU (2028)"</span>
+  <span class="c-prop">cgpa</span>     <span class="c-punc">=</span> <span class="c-num">8.42</span>  <span class="c-cmt"># Diploma DTE</span>
+
+  <span class="c-prop">skills</span> <span class="c-punc">=</span> <span class="c-punc">[</span>
+    <span class="c-str">"HTML"</span><span class="c-punc">,</span> <span class="c-str">"CSS"</span><span class="c-punc">,</span> <span class="c-str">"JavaScript"</span><span class="c-punc">,</span>
+    <span class="c-str">"Python"</span><span class="c-punc">,</span> <span class="c-str">"C"</span><span class="c-punc">,</span> <span class="c-str">"C++"</span><span class="c-punc">,</span>
+    <span class="c-str">"MySQL"</span><span class="c-punc">,</span> <span class="c-str">"MongoDB"</span>
+  <span class="c-punc">]</span>
+
+  <span class="c-kw">def</span> <span class="c-fn">greet</span><span class="c-punc">(</span>self<span class="c-punc">):</span>
+    <span class="c-kw">return</span> <span class="c-str">"Let's build something great! 🚀"</span>
+
+<span class="c-cmt"># Running…</span>
+<span class="c-fn">print</span><span class="c-punc">(</span><span class="c-cls">Developer</span><span class="c-punc">().</span><span class="c-fn">greet</span><span class="c-punc">())</span></code></pre>
+        </div>
+      </div>
+
+      <!-- Mini stats cards -->
+      <div class="hero__mini-cards" data-counters>
+        <div class="mini-card">
+          <span class="mini-card__num" data-counter data-target="8.42" data-suffix="">8.42</span>
+          <span class="mini-card__label">Diploma CGPA</span>
+        </div>
+        <div class="mini-card">
+          <span class="mini-card__num" data-counter data-target="8" data-suffix="+">8+</span>
+          <span class="mini-card__label">Tech Skills</span>
+        </div>
+        <div class="mini-card">
+          <span class="mini-card__num" data-counter data-target="3" data-suffix="">3</span>
+          <span class="mini-card__label">Languages</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scroll hint -->
+  <a href="#about" class="hero__scroll" aria-label="Scroll to about section">
+    <i class="fas fa-chevron-down" aria-hidden="true"></i>
+    <span>Scroll</span>
+  </a>
+
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     ABOUT
+═══════════════════════════════════════════════ -->
+<section class="section section--alt" id="about" aria-label="About me">
+  <div class="container">
+
+    <div class="about__grid">
+
+      <!-- Left -->
+      <div class="about__left" data-reveal="left">
+
+        <!-- Avatar -->
+        <div class="about__avatar-wrap" aria-hidden="true">
+          <div class="about__avatar-ring"></div>
+          <div class="about__avatar-bg"></div>
+          <div class="about__avatar-icon"><i class="fas fa-user-astronaut"></i></div>
+          <div class="about__status">
+            <span class="about__status-dot"></span> Open to Work
+          </div>
+        </div>
+
+        <!-- Quick pills -->
+        <div class="about__pills">
+          <span class="about__pill"><i class="fas fa-map-marker-alt"></i> Belagavi, KA</span>
+          <span class="about__pill"><i class="fas fa-graduation-cap"></i> VTU Student</span>
+          <span class="about__pill"><i class="fas fa-code"></i> Fresher</span>
+          <span class="about__pill"><i class="fas fa-language"></i> 3 Languages</span>
+        </div>
+
+        <!-- Stat boxes -->
+        <div class="about__stats" data-counters>
+          <div class="stat-box">
+            <span class="stat-box__num" data-counter data-target="8.42">8.42</span>
+            <span class="stat-box__label">CGPA</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-box__num" data-counter data-target="8" data-suffix="+">8+</span>
+            <span class="stat-box__label">Skills</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-box__num" data-counter data-target="3">3</span>
+            <span class="stat-box__label">Langs</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right -->
+      <div class="about__right" data-reveal="right">
+
+        <span class="section-label">01 — About Me</span>
+        <h2 class="section-title">Who <span class="g-text">I Am</span></h2>
+
+        <div class="about__bio">
+          <p>
+            I'm <strong>Sultansab T Naikwadi</strong>, a dedicated CS student currently
+            pursuing my <strong>BE at VTU</strong> (expected 2028), following a
+            <strong>Diploma from DTE</strong> with a stellar CGPA of <strong>8.42</strong>.
+          </p>
+          <p>
+            My journey started with curiosity about how the web works, and it has grown into
+            a deep passion for writing clean, efficient code and solving real-world problems
+            through technology.
+          </p>
+          <p>
+            I'm actively seeking <strong>internships and collaborations</strong> where I can
+            contribute meaningfully while continuing to grow as a software engineer.
+          </p>
+        </div>
+
+        <!-- Detail grid -->
+        <div class="about__details">
+          <div class="detail-item">
+            <div class="detail-item__icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <span class="detail-item__key">Location</span>
+              <span class="detail-item__val">Belagavi, Karnataka 590016</span>
+            </div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-item__icon"><i class="fas fa-birthday-cake"></i></div>
+            <div>
+              <span class="detail-item__key">Date of Birth</span>
+              <span class="detail-item__val">November 23, 2006</span>
+            </div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-item__icon"><i class="fas fa-language"></i></div>
+            <div>
+              <span class="detail-item__key">Languages</span>
+              <span class="detail-item__val">Hindi · English · Kannada</span>
+            </div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-item__icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <span class="detail-item__key">Email</span>
+              <span class="detail-item__val">zakinaik000@gmail.com</span>
+            </div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-item__icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <span class="detail-item__key">Phone</span>
+              <span class="detail-item__val">+91 8088067172</span>
+            </div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-item__icon"><i class="fas fa-briefcase"></i></div>
+            <div>
+              <span class="detail-item__key">Status</span>
+              <span class="detail-item__val">Fresher — Open to Work</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about__cta">
+          <a href="mailto:zakinaik000@gmail.com" class="btn btn-primary">
+            <i class="fas fa-envelope"></i> Email Me
+          </a>
+          <a href="#contact" class="btn btn-ghost">
+            <i class="fas fa-comment-dots"></i> Let's Talk
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     SKILLS
+═══════════════════════════════════════════════ -->
+<section class="section" id="skills" aria-label="Skills">
+  <div class="container">
+
+    <div class="section-head" data-reveal="up">
+      <span class="section-label">02 — Tech Stack</span>
+      <h2 class="section-title">My <span class="g-text">Skills</span></h2>
+      <p class="section-desc">Technologies and tools I work with on a daily basis.</p>
+    </div>
+
+    <!-- Tab bar (visual only) -->
+    <div class="skills__tabs" data-reveal="up" data-delay="100">
+      <button class="skills__tab active">All</button>
+      <button class="skills__tab">Web</button>
+      <button class="skills__tab">Programming</button>
+      <button class="skills__tab">Database</button>
+    </div>
+
+    <!-- Skill cards -->
+    <div class="skills__grid" data-stagger="100">
+
+      <!-- Web -->
+      <div class="skill-card skill-card--web" data-reveal="up" data-delay="100">
+        <div class="skill-card__header">
+          <div class="skill-card__cat-icon"><i class="fas fa-globe"></i></div>
+          <div class="skill-card__cat-name">Web Development</div>
+          <span class="skill-card__cat-count">3 skills</span>
+        </div>
+        <div class="skill-rows">
+          <div class="skill-row">
+            <div class="skill-row__icon si-html"><i class="fab fa-html5"></i></div>
+            <div class="skill-row__meta">
+              <span class="skill-row__name">HTML5</span>
+              <div class="skill-row__bar"><div class="skill-row__fill" data-width="92%"></div></div>
+            </div>
+            <span class="skill-row__pct">92%</span>
+          </div>
+          <div class="skill-row">
+            <div class="skill-row__icon si-css"><i class="fab fa-css3-alt"></i></div>
+            <div class="skill-row__meta">
+              <span class="skill-row__name">CSS3</span>
+              <div class="skill-row__bar"><div class="skill-row__fill" data-width="88%"></div></div>
+            </div>
+            <span class="skill-row__pct">88%</span>
+          </div>
+          <div class="skill-row">
+            <div class="skill-row__icon si-js"><i class="fab fa-js-square"></i></div>
+            <div class="skill-row__meta">
+              <span class="skill-row__name">JavaScript</span>
+              <div class="skill-row__bar"><div class="skill-row__fill" data-width="75%"></div></div>
+            </div>
+            <span class="skill-row__pct">75%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Programming -->
+      <div class="skill-card skill-card--lang" data-reveal="up" data-delay="200">
+        <div class="skill-card__header">
+          <div class="skill-card__cat-icon"><i class="fas fa-code"></i></div>
+          <div class="skill-card__cat-name">Programming</div>
+          <span class="skill-card__cat-count">3 skills</span>
+        </div>
+        <div class="skill-rows">
+          <div class="skill-row">
+            <div class="skill-row__icon si-c"><i class="fas fa-copyright"></i></div>
+            <div class="skill-row__meta">
+              <span class="skill-row__name">C</span>
+              <div class="skill-row__bar"><div class="skill-row__fill" data-width="82%"></div></div>
+            </div>
+            <span class="skill-row__pct">82%</span>
+          </div>
+          <div class="skill-row">
+            <div class="skill-row__icon si-cpp"><i class="fas fa-plus-square"></i></div>
+            <div class="skill-row__meta">
+              <span class="skill-row__name">C++</span>
+              <div class="skill-row__bar"><div class="skill-row__fill" data-width="78%"></div></div>
+            </div>
+            <span class="skill-row__pct">78%</span>
+          </div>
+          <div class="skill-row">
+            <div class="skill-row__icon si-py"><i class="fab fa-python"></i></div>
+            <div class="skill-row__meta">
+              <span class="skill-row__name">Python</span>
+              <div class="skill-row__bar"><div class="skill-row__fill" data-width="80%"></div></div>
+            </div>
+            <span class="skill-row__pct">80%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Database -->
+      <div class="skill-card skill-card--db" data-reveal="up" data-delay="300">
+        <div class="skill-card__header">
+          <div class="skill-card__cat-icon"><i class="fas fa-database"></i></div>
+          <div class="skill-card__cat-name">Databases</div>
+          <span class="skill-card__cat-count">2 skills</span>
+        </div>
+        <div class="skill-rows">
+          <div class="skill-row">
+            <div class="skill-row__icon si-sql"><i class="fas fa-table"></i></div>
+            <div class="skill-row__meta">
+              <span class="skill-row__name">MySQL</span>
+              <div class="skill-row__bar"><div class="skill-row__fill" data-width="74%"></div></div>
+            </div>
+            <span class="skill-row__pct">74%</span>
+          </div>
+          <div class="skill-row">
+            <div class="skill-row__icon si-mongo"><i class="fas fa-leaf"></i></div>
+            <div class="skill-row__meta">
+              <span class="skill-row__name">MongoDB</span>
+              <div class="skill-row__bar"><div class="skill-row__fill" data-width="68%"></div></div>
+            </div>
+            <span class="skill-row__pct">68%</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Tech badge cloud -->
+    <div class="skills__cloud" data-reveal="up" data-delay="200">
+      <span class="tech-badge tb-html"><i class="fab fa-html5"></i> HTML5</span>
+      <span class="tech-badge tb-css"><i class="fab fa-css3-alt"></i> CSS3</span>
+      <span class="tech-badge tb-js"><i class="fab fa-js-square"></i> JavaScript</span>
+      <span class="tech-badge tb-c"><i class="fas fa-copyright"></i> C</span>
+      <span class="tech-badge tb-cpp"><i class="fas fa-code"></i> C++</span>
+      <span class="tech-badge tb-py"><i class="fab fa-python"></i> Python</span>
+      <span class="tech-badge tb-sql"><i class="fas fa-database"></i> MySQL</span>
+      <span class="tech-badge tb-mongo"><i class="fas fa-leaf"></i> MongoDB</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     EDUCATION
+═══════════════════════════════════════════════ -->
+<section class="section section--alt" id="education" aria-label="Education">
+  <div class="container">
+
+    <div class="section-head" data-reveal="up">
+      <span class="section-label">03 — Education</span>
+      <h2 class="section-title">Academic <span class="g-text">Journey</span></h2>
+      <p class="section-desc">My educational background and qualifications.</p>
+    </div>
+
+    <div class="edu__timeline">
+
+      <!-- BE (current) -->
+      <div class="edu-item edu-item--active" data-reveal="up">
+        <div class="edu-item__node edu-item__node--active" aria-hidden="true">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <div class="edu-item__card">
+          <div class="edu-item__glow" aria-hidden="true"></div>
+          <div class="edu-item__top">
+            <span class="edu-item__badge edu-item__badge--active">
+              <i class="fas fa-circle-notch fa-spin" style="font-size:0.65rem"></i>
+              Currently Pursuing
+            </span>
+            <span class="edu-item__cgpa"><i class="fas fa-book-open"></i> Appearing</span>
+          </div>
+          <h3 class="edu-item__degree">Bachelor of Engineering (BE)</h3>
+          <span class="edu-item__inst">
+            <i class="fas fa-university"></i>
+            Visvesvaraya Technological University (VTU)
+          </span>
+          <div class="edu-item__meta">
+            <span class="edu-item__meta-pill"><i class="fas fa-calendar"></i> 2025 — 2028 (Expected)</span>
+            <span class="edu-item__meta-pill"><i class="fas fa-map-marker-alt"></i> Karnataka</span>
+            <span class="edu-item__meta-pill"><i class="fas fa-laptop-code"></i> Computer Science</span>
+          </div>
+          <p class="edu-item__desc">
+            Pursuing BE in Computer Science, expanding knowledge in algorithms, data structures,
+            software engineering, operating systems, and system design fundamentals.
+          </p>
+          <div class="edu-item__tags">
+            <span class="edu-item__tag">Algorithms</span>
+            <span class="edu-item__tag">Data Structures</span>
+            <span class="edu-item__tag">OS</span>
+            <span class="edu-item__tag">DBMS</span>
+            <span class="edu-item__tag">Networks</span>
+            <span class="edu-item__tag">Software Engg.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Diploma -->
+      <div class="edu-item" data-reveal="up" data-delay="150">
+        <div class="edu-item__node edu-item__node--done" aria-hidden="true">
+          <i class="fas fa-award"></i>
+        </div>
+        <div class="edu-item__card">
+          <div class="edu-item__glow" aria-hidden="true"></div>
+          <div class="edu-item__top">
+            <span class="edu-item__badge edu-item__badge--done">
+              <i class="fas fa-check"></i> Completed
+            </span>
+            <span class="edu-item__cgpa"><i class="fas fa-star"></i> CGPA: 8.42</span>
+          </div>
+          <h3 class="edu-item__degree">Diploma in Engineering</h3>
+          <span class="edu-item__inst">
+            <i class="fas fa-university"></i>
+            Directorate of Technical Education (DTE), Karnataka
+          </span>
+          <div class="edu-item__meta">
+            <span class="edu-item__meta-pill"><i class="fas fa-calendar"></i> Completed 2025</span>
+            <span class="edu-item__meta-pill"><i class="fas fa-map-marker-alt"></i> Karnataka</span>
+            <span class="edu-item__meta-pill"><i class="fas fa-award"></i> Distinction</span>
+          </div>
+          <p class="edu-item__desc">
+            Completed Diploma in Engineering with a CGPA of 8.42 (Distinction), gaining strong
+            foundations in engineering principles, programming languages, and practical
+            technical skills that laid the groundwork for my CS career.
+          </p>
+          <div class="edu-item__tags">
+            <span class="edu-item__tag">C Programming</span>
+            <span class="edu-item__tag">Electronics</span>
+            <span class="edu-item__tag">Mathematics</span>
+            <span class="edu-item__tag">Physics</span>
+            <span class="edu-item__tag">Workshop</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     PROJECTS
+═══════════════════════════════════════════════ -->
+<section class="section" id="projects" aria-label="Projects">
+  <div class="container">
+
+    <div class="section-head" data-reveal="up">
+      <span class="section-label">04 — Projects</span>
+      <h2 class="section-title">Featured <span class="g-text">Projects</span></h2>
+      <p class="section-desc">Projects I've built to sharpen my skills and solve real problems.</p>
+    </div>
+
+    <!-- Filter buttons -->
+    <div class="projects__filter" data-reveal="up" data-delay="100">
+      <button class="filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn" data-filter="web">Web</button>
+      <button class="filter-btn" data-filter="python">Python</button>
+      <button class="filter-btn" data-filter="database">Database</button>
+      <button class="filter-btn" data-filter="cli">CLI</button>
+    </div>
+
+    <div class="projects__grid">
+
+      <!-- Project 1 -->
+      <article class="proj-card proj-card--featured" data-reveal="up" data-delay="100" data-tags="web html css js">
+        <span class="proj-card__featured-tag"><i class="fas fa-star"></i> Featured</span>
+        <div class="proj-card__header">
+          <div class="proj-card__icon"><i class="fas fa-globe"></i></div>
+          <div class="proj-card__links">
+            <a href="#" class="proj-card__link" title="GitHub" aria-label="View on GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" class="proj-card__link" title="Live Demo" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <h3 class="proj-card__title">Personal Portfolio Website</h3>
+        <p class="proj-card__desc">
+          A fully responsive, animated portfolio built from scratch with HTML, CSS & Vanilla JS — featuring dark theme, typewriter effect, scroll animations, and a contact form.
+        </p>
+        <div class="proj-card__tags">
+          <span class="proj-card__tag">HTML5</span>
+          <span class="proj-card__tag">CSS3</span>
+          <span class="proj-card__tag">JavaScript</span>
+          <span class="proj-card__tag">Responsive</span>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="proj-card" data-reveal="up" data-delay="150" data-tags="python database">
+        <div class="proj-card__header">
+          <div class="proj-card__icon"><i class="fas fa-database"></i></div>
+          <div class="proj-card__links">
+            <a href="#" class="proj-card__link" title="GitHub" aria-label="View on GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" class="proj-card__link" title="Demo" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <h3 class="proj-card__title">CineMachine</h3>
+        <p class="proj-card__desc">
+         A custom movie streaming web platform interface Focused on modern UI and user experience.
+        </p>
+        <div class="proj-card__tags">
+          <span class="proj-card__tag">HTML</span>
+          <span class="proj-card__tag">CSS</span>
+          <span class="proj-card__tag">JavaScript</span>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="proj-card" data-reveal="up" data-delay="200" data-tags="web html css js">
+        <div class="proj-card__header">
+          <div class="proj-card__icon"><i class="fas fa-calculator"></i></div>
+          <div class="proj-card__links">
+            <a href="#" class="proj-card__link" title="GitHub" aria-label="View on GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" class="proj-card__link" title="Demo" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <h3 class="proj-card__title">TIC TAC TOE</h3>
+        <p class="proj-card__desc">
+          This is an interactive web version of the classic Tic-Tac-Toe game built on a 3x3 grid. Two players take turns placing X and O marks in empty squares. The first player to line up three matching symbols horizontally, vertically, or diagonally wins. If all nine squares fill up with no three-in-a-row, the round ends in a draw.
+        </p>
+        <div class="proj-card__tags">
+          <span class="proj-card__tag">HTML5</span>
+          <span class="proj-card__tag">CSS3</span>
+          <span class="proj-card__tag">JavaScript</span>
+        </div>
+      </article>
+
+      <!-- Project 4 -->
+      <article class="proj-card" data-reveal="up" data-delay="250" data-tags="python cli">
+        <div class="proj-card__header">
+          <div class="proj-card__icon"><i class="fab fa-python"></i></div>
+          <div class="proj-card__links">
+            <a href="#" class="proj-card__link" title="GitHub" aria-label="View on GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" class="proj-card__link" title="Demo" aria-label="Demo"><i class="fas fa-terminal"></i></a>
+          </div>
+        </div>
+        <h3 class="proj-card__title">CLI To-Do App</h3>
+        <p class="proj-card__desc">
+          A command-line task manager written in Python with JSON-based file persistence, supporting add, remove, complete, list, and clear operations with colored output.
+        </p>
+        <div class="proj-card__tags">
+          <span class="proj-card__tag">Python</span>
+          <span class="proj-card__tag">JSON</span>
+          <span class="proj-card__tag">CLI</span>
+        </div>
+      </article>
+
+      <!-- Project 5 -->
+      <article class="proj-card" data-reveal="up" data-delay="300" data-tags="python database">
+        <div class="proj-card__header">
+          <div class="proj-card__icon"><i class="fas fa-leaf"></i></div>
+          <div class="proj-card__links">
+            <a href="#" class="proj-card__link" title="GitHub" aria-label="View on GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" class="proj-card__link" title="Demo" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <h3 class="proj-card__title">MongoDB Blog Backend</h3>
+        <p class="proj-card__desc">
+          A RESTful blog API backend using Python and MongoDB with CRUD support for posts, comments, and user profiles via clean API endpoints.
+        </p>
+        <div class="proj-card__tags">
+          <span class="proj-card__tag">Python</span>
+          <span class="proj-card__tag">MongoDB</span>
+          <span class="proj-card__tag">REST API</span>
+        </div>
+      </article>
+
+      <!-- Placeholder -->
+      <div class="proj-card proj-card--placeholder" data-reveal="up" data-delay="350">
+        <div class="proj-placeholder-icon"><i class="fas fa-plus"></i></div>
+        <h3 class="proj-card__title">More Coming Soon</h3>
+        <p class="proj-card__desc">Currently building new exciting projects. Stay tuned! 🚀</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     CONTACT
+═══════════════════════════════════════════════ -->
+<section class="section section--alt" id="contact" aria-label="Contact">
+  <div class="container">
+
+    <div class="contact__grid">
+
+      <!-- Left: Info -->
+      <div class="contact__info" data-reveal="left">
+        <span class="section-label">05 — Contact</span>
+        <h2 class="section-title">Let's <span class="g-text">Connect</span></h2>
+        <p class="contact__tagline">
+          I'm open to internships, freelance projects, collaborations, and exciting opportunities.
+          Whether you have a project in mind or just want to say hello — my inbox is always open! 👋
+        </p>
+
+        <div class="contact__details">
+          <a href="mailto:zakinaik000@gmail.com" class="contact__detail">
+            <div class="contact__detail-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <span class="contact__detail-label">Email</span>
+              <strong class="contact__detail-value">zakinaik000@gmail.com</strong>
+            </div>
+          </a>
+          <a href="tel:+918088067172" class="contact__detail">
+            <div class="contact__detail-icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <span class="contact__detail-label">Phone</span>
+              <strong class="contact__detail-value">+91 8088067172</strong>
+            </div>
+          </a>
+          <div class="contact__detail">
+            <div class="contact__detail-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <span class="contact__detail-label">Location</span>
+              <strong class="contact__detail-value">Belagavi, Karnataka 590016 🇮🇳</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact__socials">
+          <a href="#" class="contact__social" title="GitHub" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="#" class="contact__social" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:zakinaik000@gmail.com" class="contact__social" title="Email" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="tel:+918088067172" class="contact__social" title="Phone" aria-label="Phone"><i class="fas fa-phone"></i></a>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="contact__form-wrap" data-reveal="right">
+        <h3 class="contact__form-title">
+          <i class="fas fa-paper-plane"></i> Send a Message
+        </h3>
+
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="cf-name">Your Name</label>
+              <input id="cf-name" name="name" type="text" placeholder="Sultansab" required autocomplete="name" />
+            </div>
+            <div class="form-field">
+              <label for="cf-email">Email Address</label>
+              <input id="cf-email" name="email" type="email" placeholder="you@example.com" required autocomplete="email" />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="cf-subject">Subject</label>
+            <input id="cf-subject" name="subject" type="text" placeholder="Internship opportunity / Project collaboration" required />
+          </div>
+          <div class="form-field">
+            <label for="cf-message">Your Message</label>
+            <textarea id="cf-message" name="message" rows="5" placeholder="Tell me about your project or opportunity…" required></textarea>
+          </div>
+          <button type="submit" class="form-submit">
+            <i class="fas fa-paper-plane"></i>
+            <span>Send Message</span>
+          </button>
+          <div id="form-status" class="form-status" role="alert" aria-live="polite"></div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+
+    <div class="footer__grid">
+
+      <!-- Brand -->
+      <div class="footer__brand">
+        <a href="#hero" class="footer__logo">
+          <span class="bracket">&lt;</span>Sultan<span class="slash">/</span><span class="bracket">&gt;</span>
+        </a>
+        <p class="footer__tagline">
+          A passionate CS student from Belagavi, Karnataka — building the web one commit at a time. Open to opportunities and collaborations.
+        </p>
+        <div class="footer__socials">
+          <a href="#" class="footer__social" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="#" class="footer__social" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:zakinaik000@gmail.com" class="footer__social" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="tel:+918088067172" class="footer__social" aria-label="Phone"><i class="fas fa-phone"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick links -->
+      <div>
+        <h4 class="footer__col-title">Quick Links</h4>
+        <ul class="footer__links">
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact info -->
+      <div>
+        <h4 class="footer__col-title">Contact</h4>
+        <ul class="footer__links">
+          <li><a href="mailto:zakinaik000@gmail.com">zakinaik000@gmail.com</a></li>
+          <li><a href="tel:+918088067172">+91 8088067172</a></li>
+          <li><a href="#">Belagavi, Karnataka</a></li>
+          <li><a href="#">590016, India</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer__divider"></div>
+
+    <div class="footer__bottom">
+      <p class="footer__copy">
+        © 2026 <span>Sultansab T Naikwadi</span>. Crafted with
+        <i class="fas fa-heart" style="color:#ef4444; margin-inline:3px;"></i>
+        &amp; ☕ in Belagavi, India.
+      </p>
+      <a href="#hero" class="footer__back-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+      </a>
+    </div>
+
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════
+     JAVASCRIPT FILES (load order matters)
+═══════════════════════════════════════════════ -->
+<script src="js/loader.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/typewriter.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/cursor.js"></script>
+<script src="js/projects.js"></script>
+<script src="js/contact.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

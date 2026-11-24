@@ -1,0 +1,212 @@
+/* =============================================
+   EDUCATION SECTION STYLES
+   File: css/education.css
+   ============================================= */
+
+.edu__timeline {
+  position: relative;
+  max-width: 820px;
+  margin-inline: auto;
+}
+
+/* Vertical line */
+.edu__timeline::before {
+  content: '';
+  position: absolute;
+  left: 28px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    var(--purple) 0%,
+    var(--blue-lt) 50%,
+    rgba(124,58,237,0.1) 100%
+  );
+  border-radius: var(--r-full);
+}
+
+/* ---- Timeline item ---- */
+.edu-item {
+  position: relative;
+  padding-left: 76px;
+  padding-bottom: 48px;
+}
+.edu-item:last-child { padding-bottom: 0; }
+
+/* Node circle */
+.edu-item__node {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  width: 58px; height: 58px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.1rem;
+  z-index: 1;
+  transition: all var(--t-normal) var(--ease);
+}
+.edu-item__node--active {
+  background: var(--grad-main);
+  color: #fff;
+  box-shadow: 0 0 0 6px rgba(124,58,237,0.15), 0 0 24px rgba(124,58,237,0.4);
+}
+.edu-item__node--done {
+  background: var(--bg-card);
+  border: 2px solid var(--border-mid);
+  color: var(--purple-lt);
+}
+.edu-item:hover .edu-item__node--done {
+  box-shadow: 0 0 20px rgba(124,58,237,0.3);
+  border-color: var(--border-bright);
+}
+
+/* Card */
+.edu-item__card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-dim);
+  border-radius: var(--r-xl);
+  padding: 30px 32px;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--t-normal) var(--ease);
+}
+.edu-item__card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--grad-main);
+  opacity: 0;
+  transition: opacity var(--t-normal);
+}
+.edu-item--active .edu-item__card {
+  border-color: rgba(124,58,237,0.35);
+  box-shadow: var(--glow-purple);
+}
+.edu-item--active .edu-item__card::after { opacity: 1; }
+.edu-item:hover .edu-item__card {
+  border-color: var(--border-mid);
+  transform: translateX(4px);
+}
+
+/* Card glow bg */
+.edu-item__glow {
+  position: absolute;
+  top: -40px; right: -40px;
+  width: 180px; height: 180px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(124,58,237,0.1), transparent 70%);
+  pointer-events: none;
+}
+
+/* Top row */
+.edu-item__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.edu-item__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  border-radius: var(--r-full);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+.edu-item__badge--active {
+  background: rgba(124,58,237,0.12);
+  color: var(--purple-lt);
+  border: 1px solid var(--border-soft);
+}
+.edu-item__badge--done {
+  background: rgba(16,185,129,0.1);
+  color: var(--green-lt);
+  border: 1px solid rgba(16,185,129,0.25);
+}
+
+.edu-item__cgpa {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: var(--r-full);
+  font-size: 0.82rem;
+  font-weight: 700;
+  background: rgba(251,191,36,0.1);
+  border: 1px solid rgba(251,191,36,0.25);
+  color: var(--amber-lt);
+}
+
+/* Degree */
+.edu-item__degree {
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+  line-height: 1.25;
+}
+
+/* Institution */
+.edu-item__inst {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.edu-item__inst i { color: var(--purple-lt); font-size: 0.85rem; }
+
+/* Meta row */
+.edu-item__meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-dim);
+}
+.edu-item__meta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+.edu-item__meta-pill i { color: var(--purple-lt); }
+
+/* Description */
+.edu-item__desc {
+  color: var(--text-muted);
+  font-size: 0.93rem;
+  line-height: 1.7;
+}
+
+/* Tags */
+.edu-item__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+.edu-item__tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: var(--r-sm);
+  background: rgba(124,58,237,0.08);
+  border: 1px solid var(--border-dim);
+  color: var(--purple-xlt);
+}
